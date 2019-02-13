@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>DevWorkFlow</h1>
   </div>
 </template>
 
@@ -9,7 +8,7 @@
 export default {
   name: 'home',
   components: {
-    
+
   }
 }
 </script>
