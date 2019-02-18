@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ formType }}
+    {{ formattedTitle }}
     <form>
       <div v-if="formType === 'register'">
         <label>Name</label>
@@ -16,7 +16,7 @@
       </div>
     </form>
 
-    <button @click.prevent="updateLoginDetails">Click me</button>
+    <button @click.prevent="updateLoginDetails">{{ formattedTitle }}</button>
   </div>
 </template>
 
@@ -32,6 +32,11 @@ export default {
   },
   props: {
     formType: String
+  },
+  computed: {
+    formattedTitle: function() {
+      return this.formType[0].toUpperCase() + this.formType.slice(1)
+    }
   },
   methods: {
     updateLoginDetails() {
