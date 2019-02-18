@@ -1,31 +1,17 @@
 <template>
   <div>
-    <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage"/>
-    <Login @update="handleLoginUpdate" />
+    Dashboard
   </div>
 </template>
 
 <script>
-import HomepageContent from "@/components/content/HomepageContent"
-import Login from "@/components/auth/Login"
+
 
 export default {
   name: 'Dashboard',
   data() {
     return {
-      email: "",
-      password: "",
-      subtitleContent: "Manage your development projects",
-      marketingMessage: "Sign up today to get started today"
-    }
-  },
-  components: {
-    HomepageContent,
-    Login
-  },
-  methods: {
-    handleLoginUpdate(data) {
-      console.log(data)
+
     }
   }
 }
