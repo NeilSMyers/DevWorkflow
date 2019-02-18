@@ -1,18 +1,14 @@
 <template>
   <div>
     <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage"/>
-
-    <div>
-      <form>
-        <input type="text" v-model="email"/>
-        <input type="password" v-model="password"/>
-      </form>
-    </div>
+    <Login @update="handleLoginUpdate" />
   </div>
 </template>
 
 <script>
 import HomepageContent from "@/components/content/HomepageContent"
+import Login from "@/components/auth/Login"
+
 export default {
   name: 'Dashboard',
   data() {
@@ -24,7 +20,13 @@ export default {
     }
   },
   components: {
-    HomepageContent
+    HomepageContent,
+    Login
+  },
+  methods: {
+    handleLoginUpdate(data) {
+      console.log(data)
+    }
   }
 }
 </script>
